@@ -26,7 +26,7 @@ const App = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src="/logo.png" alt="TUKUNA FOR MARS" className="w-8 h-8 rounded-full" />
+            <img src="/logo-animated.svg" alt="TUKUNA MARS" className="w-8 h-8" />
             <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
               TUKUNA FOR MARS
             </span>
@@ -295,6 +295,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
