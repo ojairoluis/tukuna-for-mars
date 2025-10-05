@@ -270,7 +270,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* Footer */}
+            {/* Footer */}
       <footer className="py-12 px-6 bg-gray-900 border-t border-amber-800/30">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex justify-center mb-6">
@@ -282,4 +282,15 @@ const App = () => {
           <p className="text-gray-400 mb-4">
             TUKUNA FOR MARS — Turning space waste into Martian life since 2025.
           </p>
-          <div className="flex justify-center space-x-6 text-gray-50
+          <div className="flex justify-center space-x-6 text-gray-500">
+            <span>© 2025 TUKUNA FOR MARS</span>
+            <span>•</span>
+            <span>Regenerating the cosmos, one orbit at a time</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
