@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Rocket, Recycle, Zap, Globe, Users, ChevronRight, Leaf } from 'lucide-react';
+import { Rocket, Recycle, Zap, Globe, ChevronRight, Leaf } from 'lucide-react';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -24,12 +24,13 @@ const App = () => {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-gray-900/90 backdrop-blur-sm py-2' : 'bg-transparent py-4'
       }`}>
-        <div className="flex items-center space-x-2">
-  <img src="/logo.png" alt="TUKUNA MARS" className="w-8 h-8 rounded-full" />
-  <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
-    TUKUNA MARS
-  </span>
-</div>
+        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+          <div className="flex items-center space-x-2">
+            <img src="/logo.png" alt="TUKUNA FOR MARS" className="w-8 h-8 rounded-full" />
+            <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
+              TUKUNA FOR MARS
+            </span>
+          </div>
           <div className="hidden md:flex space-x-8">
             {['hero', 'mission', 'agents', 'process', 'sponsors'].map((section) => (
               <button
@@ -77,7 +78,7 @@ const App = () => {
               TUKUNA
             </span>
             <br />
-            <span className="text-white">MARS</span>
+            <span className="text-white">FOR MARS</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
             Pioneering sustainable space ecosystems by transforming orbital waste into Martian life resources
@@ -224,15 +225,16 @@ const App = () => {
               The <span className="text-amber-400">TUKUNA Cycle</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A closed-loop system from Earth orbit to Martian soil
+              Recycling & manufacturing roadmap — Mars
             </p>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-5 gap-6">
             {[
-              { step: "1", title: "Capture", desc: "Agents collect debris using adaptive nets and robotic arms" },
-              { step: "2", title: "Refine", desc: "On-station smelting separates metals, plastics, and volatiles" },
-              { step: "3", title: "Replicate", desc: "Materials 3D-print tools, habitats, and life support systems" },
-              { step: "4", title: "Regenerate", desc: "Waste becomes oxygen, water, and soil for Mars colonies" }
+              { step: "1", title: "Metals", desc: "Recycled alloys for structural components, tools, and machinery on Mars." },
+              { step: "2", title: "Plastics", desc: "Transformed into polymers for habitats, containers, and insulation materials." },
+              { step: "3", title: "Textiles & Fibers", desc: "Converted into fabrics for suits, tents, and agricultural covers." },
+              { step: "4", title: "Carbonaceous / Exp.", desc: "Processed into carbon composites for energy storage and propulsion systems." },
+              { step: "5", title: "Regolith", desc: "Used as raw material for 3D-printed structures and soil for Martian agriculture." }
             ].map((process, index) => (
               <div key={index} className="text-center group">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-emerald-500 to-amber-500 rounded-full flex items-center justify-center text-2xl font-bold text-white group-hover:scale-110 transition-transform">
@@ -269,7 +271,7 @@ const App = () => {
         </div>
       </section>
 
-            {/* Footer */}
+      {/* Footer */}
       <footer className="py-12 px-6 bg-gray-900 border-t border-amber-800/30">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex justify-center mb-6">
@@ -293,5 +295,6 @@ const App = () => {
 };
 
 export default App;
+
 
 
