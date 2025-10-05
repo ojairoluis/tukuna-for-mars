@@ -1,7 +1,6 @@
-// src/main.jsx
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'  // 👈 esta línea es clave
+import './index.css'  // 👈 IMPORTANTE
 import App from './App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -9,3 +8,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>
 )
+
