@@ -26,9 +26,9 @@ const App = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src="/logo-animated.svg" alt="TUKUNA MARS" className="w-8 h-8" />
+            <img src="/logo-animated.svg" alt="TUKUNA FOR MARS" className="w-8 h-8" />
             <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
-              TUKUNA FOR MARS
+              TUKUNA MARS
             </span>
           </div>
           <div className="hidden md:flex space-x-8">
@@ -78,7 +78,7 @@ const App = () => {
               TUKUNA
             </span>
             <br />
-            <span className="text-white">FOR MARS</span>
+            <span className="text-white">MARS</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
             Pioneering sustainable space ecosystems by transforming orbital waste into Martian life resources
@@ -191,24 +191,37 @@ const App = () => {
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-gray-800 to-amber-900/20 rounded-2xl p-8 border border-amber-700/30">
-                <div className="aspect-square bg-gray-900 rounded-xl flex items-center justify-center mb-6 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 to-amber-900/20"></div>
-                  <Recycle className="w-24 h-24 text-amber-400 opacity-60" />
-                  <Leaf className="absolute top-4 right-4 w-8 h-8 text-emerald-400" />
+                {/* 🔥 Reemplaza esto con tu imagen o video del prototipo */}
+                <div className="aspect-square bg-gray-900 rounded-xl mb-6 relative overflow-hidden">
+                  {/* Opción 1: Imagen estática (recomendado si no tienes video) */}
+                  <img 
+                    src="/prototype.jpg" 
+                    alt="TUKUNA Prototype" 
+                    className="w-full h-full object-cover" 
+                  />
+                  {/* Opción 2: Video (descomenta si lo tienes) */}
+                  {/* <video 
+                    src="/prototype.mp4" 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    className="w-full h-full object-cover"
+                  /> */}
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-center text-amber-300">2025 Launch Countdown</h3>
+                <h3 className="text-2xl font-bold mb-4 text-center text-amber-300">TUKUNA Prototype — Mars Ready</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-gray-300">Orbital Station</span>
-                    <span className="text-amber-400 font-bold">Under Construction</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-300">Agent Fleet</span>
+                    <span className="text-gray-300">Status</span>
                     <span className="text-amber-400 font-bold">In Testing Phase</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-300">Mars Pilot Site</span>
-                    <span className="text-amber-400 font-bold">Ready</span>
+                    <span className="text-gray-300">Launch Date</span>
+                    <span className="text-amber-400 font-bold">Q3 2025</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-300">Mission</span>
+                    <span className="text-amber-400 font-bold">Orbital + Surface</span>
                   </div>
                 </div>
               </div>
@@ -281,7 +294,7 @@ const App = () => {
             </div>
           </div>
           <p className="text-gray-400 mb-4">
-            TUKUNA MARS — Turning space waste into Martian life since 2025.
+            TUKUNA FOR MARS — Turning space waste into Martian life since 2025.
           </p>
           <div className="flex justify-center space-x-6 text-gray-500">
             <span>© 2025 TUKUNA MARS</span>
