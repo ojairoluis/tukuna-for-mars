@@ -387,16 +387,6 @@ const App = () => {
                       <path d="M680,520 L740,520"/>
                       <path d="M680,640 L740,640"/>
                     </g>
-
-                    <!-- Footer notes -->
-                    <rect x="10" y="1320" width="1180" height="170" rx="12" fill="#071823" stroke="#0f1720" stroke-width="2"/>
-                    <text x="30" y="1355" fill="#cfe7f6" font-size="14" font-weight="700">Operational Notes</text>
-                    <text x="30" y="1385" fill="#9fbdd6" font-size="13">• Protect optics and mechanisms from Martian dust; periodic cleaning and seals.</text>
-                    <text x="30" y="1410" fill="#9fbdd6" font-size="13">• Prioritize solar sintering and solar drying to minimize electricity use.</text>
-                    <text x="30" y="1435" fill="#9fbdd6" font-size="13">• Design modular equipment, repairable with locally printed parts.</text>
-                    <text x="30" y="1460" fill="#9fbdd6" font-size="13">• Thermal processes (casting, pyrolysis) require sealed chambers and controls; avoid releasing byproducts into habitat.</text>
-                  </svg>
-                `
               }}
             />
           </div>
@@ -457,4 +447,5 @@ const App = () => {
 };
 
 export default App;
+
 
