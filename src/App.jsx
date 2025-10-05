@@ -26,9 +26,9 @@ const App = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src="/logo-animated.svg" alt="TUKUNA FOR MARS" className="w-8 h-8" />
+            <img src="/logo-animated.svg" alt="TUKUNA MARS" className="w-8 h-8" />
             <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
-              TUKUNA FOR MARS
+              TUKUNA MARS
             </span>
           </div>
           <div className="hidden md:flex space-x-8">
@@ -76,7 +76,7 @@ const App = () => {
             <div className="relative">
               <img 
                 src="/logo-animated.svg" 
-                alt="TUKUNA FOR MARS" 
+                alt="TUKUNA MARS" 
                 className="w-32 h-32 animate-spin" 
                 style={{ animationDuration: '15s', animationIterationCount: 'infinite' }}
               />
@@ -89,7 +89,7 @@ const App = () => {
               TUKUNA
             </span>
             <br />
-            <span className="text-white drop-shadow-lg">FOR MARS</span>
+            <span className="text-white drop-shadow-lg">MARS</span>
           </h1>
 
           {/* Subtítulo con animación de entrada */}
@@ -471,10 +471,10 @@ const App = () => {
             </div>
           </div>
           <p className="text-gray-400 mb-4">
-            TUKUNA FOR MARS — Turning space waste into Martian life since 2025.
+            TUKUNA MARS — Turning space waste into Martian life since 2025.
           </p>
           <div className="flex justify-center space-x-6 text-gray-500">
-            <span>© 2025 TUKUNA FOR MARS</span>
+            <span>© 2025 TUKUNA MARS</span>
             <span>•</span>
             <span>Regenerating the cosmos, one orbit at a time</span>
           </div>
@@ -485,6 +485,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
