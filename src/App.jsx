@@ -26,9 +26,9 @@ const App = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src="/logo-animated.svg" alt="TUKUNA MARS" className="w-8 h-8" />
+            <img src="/logo-animated.svg" alt="TUKUNA FOR MARS" className="w-8 h-8" />
             <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
-              TUKUNA MARS
+              TUKUNA FOR MARS
             </span>
           </div>
           <div className="hidden md:flex space-x-8">
@@ -76,7 +76,7 @@ const App = () => {
             <div className="relative">
               <img 
                 src="/logo-animated.svg" 
-                alt="TUKUNA MARS" 
+                alt="TUKUNA FOR MARS" 
                 className="w-32 h-32 animate-spin" 
                 style={{ animationDuration: '15s', animationIterationCount: 'infinite' }}
               />
@@ -89,11 +89,11 @@ const App = () => {
               TUKUNA
             </span>
             <br />
-            <span className="text-white drop-shadow-lg">MARS</span>
+            <span className="text-white drop-shadow-lg">FOR MARS</span>
           </h1>
 
           {/* Subtítulo con animación de entrada */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
             Pioneering sustainable space ecosystems by transforming orbital waste into Martian life resources
           </p>
 
@@ -114,7 +114,7 @@ const App = () => {
           </div>
 
           {/* Línea de tiempo o estado */}
-          <p className="mt-6 text-amber-300 font-medium animate-bounce">
+          <p className="mt-6 text-amber-300 font-medium">
             🚀 Launching operations in 2025
           </p>
         </div>
@@ -125,9 +125,6 @@ const App = () => {
         </div>
       </section>
 
-      {/* Resto del código (Mission, Agents, Process, Sponsors, Footer) permanece igual */}
-      {/* ... (sigue el resto del código como antes) */}
-      
       {/* Mission Section */}
       <section id="mission" className="py-20 px-6 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
@@ -243,33 +240,172 @@ const App = () => {
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Process Section — Organigrama Vertical */}
       <section id="process" className="py-20 px-6 bg-gray-900/50">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
               The <span className="text-amber-400">TUKUNA Cycle</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Recycling & manufacturing roadmap — Mars
             </p>
           </div>
-          <div className="grid md:grid-cols-5 gap-6">
-            {[
-              { step: "1", title: "Metals", desc: "Recycled alloys for structural components, tools, and machinery on Mars." },
-              { step: "2", title: "Plastics", desc: "Transformed into polymers for habitats, containers, and insulation materials." },
-              { step: "3", title: "Textiles & Fibers", desc: "Converted into fabrics for suits, tents, and agricultural covers." },
-              { step: "4", title: "Carbonaceous / Exp.", desc: "Processed into carbon composites for energy storage and propulsion systems." },
-              { step: "5", title: "Regolith", desc: "Used as raw material for 3D-printed structures and soil for Martian agriculture." }
-            ].map((process, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-emerald-500 to-amber-500 rounded-full flex items-center justify-center text-2xl font-bold text-white group-hover:scale-110 transition-transform">
-                  {process.step}
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{process.title}</h3>
-                <p className="text-gray-400">{process.desc}</p>
-              </div>
-            ))}
+
+          {/* Contenedor del organigrama */}
+          <div 
+            className="bg-gradient-to-b from-gray-900/30 to-black/50 rounded-2xl p-4 md:p-6 border border-amber-900/20 overflow-hidden"
+            style={{ 
+              background: 'linear-gradient(180deg, rgba(10,10,15,0.8), rgba(0,0,0,0.9))',
+              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.7)'
+            }}
+          >
+            <div 
+              className="flow overflow-x-auto overflow-y-hidden"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  <svg viewBox="0 0 1200 1500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet" style="min-width:1200px; display: block;">
+                    <defs>
+                      <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.7"/>
+                      </filter>
+                      <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+                        <path d="M0,0 L12,6 L0,12 z" fill="#e6eef6"/>
+                      </marker>
+                      <linearGradient id="gradA" x1="0" x2="1"><stop offset="0" stop-color="#14202b"/><stop offset="1" stop-color="#0f1720"/></linearGradient>
+                      <linearGradient id="gradB" x1="0" x2="1"><stop offset="0" stop-color="#1a2b38"/><stop offset="1" stop-color="#0f1720"/></linearGradient>
+                    </defs>
+
+                    <!-- Title block -->
+                    <rect x="10" y="10" width="1180" height="80" rx="12" fill="url(#gradA)" stroke="#0b1116" stroke-width="2"/>
+                    <text x="30" y="55" fill="#e6eef6" font-size="22" font-weight="700">Recycling and Manufacturing Routes Map — Mars</text>
+
+                    <!-- Left column: Raw Materials -->
+                    <g id="col_left" transform="translate(20,120)">
+                      <g class="node" transform="translate(0,0)">
+                        <rect x="0" y="0" width="260" height="80" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="28" fill="#ffb37a" font-size="15" font-weight="700">1. Metals</text>
+                        <text x="16" y="50" fill="#c6d6e6" font-size="13">Aluminum, scrap, frames</text>
+                      </g>
+                      <g class="node" transform="translate(0,120)">
+                        <rect x="0" y="0" width="260" height="80" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="28" fill="#ffb37a" font-size="15" font-weight="700">2. Plastics</text>
+                        <text x="16" y="50" fill="#c6d6e6" font-size="13">PET, PP, PE, PLA, foams</text>
+                      </g>
+                      <g class="node" transform="translate(0,240)">
+                        <rect x="0" y="0" width="260" height="80" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="28" fill="#ffb37a" font-size="15" font-weight="700">3. Textiles & Fibers</text>
+                        <text x="16" y="50" fill="#c6d6e6" font-size="13">Clothing, Nomex, polyester</text>
+                      </g>
+                      <g class="node" transform="translate(0,360)">
+                        <rect x="0" y="0" width="260" height="80" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="28" fill="#ffb37a" font-size="15" font-weight="700">4. Carbonaceous / Exp.</text>
+                        <text x="16" y="50" fill="#c6d6e6" font-size="13">Char, nitrile gloves, filters</text>
+                      </g>
+                      <g class="node" transform="translate(0,480)">
+                        <rect x="0" y="0" width="260" height="100" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="30" fill="#ffb37a" font-size="15" font-weight="700">5. Regolith</text>
+                        <text x="16" y="52" fill="#c6d6e6" font-size="13">Plagioclase, pyroxene, olivine</text>
+                        <text x="16" y="72" fill="#7ea5c6" font-size="12">Base for geopolymers, sintering</text>
+                      </g>
+                    </g>
+
+                    <!-- Middle column: Processes / Machines -->
+                    <g id="col_mid" transform="translate(340,80)">
+                      <g transform="translate(0,0)">
+                        <rect x="0" y="0" width="340" height="80" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="28" fill="#ffd9b3" font-size="15" font-weight="700">Degreasing → CNC Cutting → Casting</text>
+                        <text x="16" y="50" fill="#cfe7f6" font-size="13">Ultrasonic baths · Cutter · Furnace (crucible)</text>
+                      </g>
+                      <g transform="translate(0,120)">
+                        <rect x="0" y="0" width="340" height="100" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Washing → Shredding → Extrusion</text>
+                        <text x="16" y="52" fill="#cfe7f6" font-size="13">Solar drying · Granulator · Modular extruder</text>
+                        <text x="16" y="74" fill="#9cc9e0" font-size="12">Filament / pellets for 3D printing</text>
+                      </g>
+                      <g transform="translate(0,260)">
+                        <rect x="0" y="0" width="340" height="100" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Shredding → Carding → Paneling</text>
+                        <text x="16" y="52" fill="#cfe7f6" font-size="13">Carder · Thermal setting press · Non-woven</text>
+                        <text x="16" y="74" fill="#9cc9e0" font-size="12">Insulators · Fillers · Composite reinforcements</text>
+                      </g>
+                      <g transform="translate(0,420)">
+                        <rect x="0" y="0" width="340" height="100" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Pyrolysis → Activation → Post-proc.</text>
+                        <text x="16" y="52" fill="#cfe7f6" font-size="13">Anoxic reactor · Condenser · Activator (steam)</text>
+                        <text x="16" y="74" fill="#9cc9e0" font-size="12">Char, activated carbon, composite additive</text>
+                      </g>
+                      <g transform="translate(0,580)">
+                        <rect x="0" y="0" width="340" height="120" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="32" fill="#ffd9b3" font-size="15" font-weight="700">Solar Concentrator → Sintering / Melting</text>
+                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Paraboloid / solar oven · Sintering chamber</text>
+                        <text x="16" y="76" fill="#9cc9e0" font-size="12">Blocks, molds, geopolymers, glass</text>
+                      </g>
+                    </g>
+
+                    <!-- Right column: Final Products -->
+                    <g id="col_right" transform="translate(740,120)">
+                      <g transform="translate(0,0)">
+                        <rect x="0" y="0" width="380" height="90" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Metals → Tools & Cast Parts</text>
+                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Wrenches, supports, bushings</text>
+                      </g>
+                      <g transform="translate(0,120)">
+                        <rect x="0" y="0" width="380" height="90" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Plastics → Filament / 3D Parts</text>
+                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Casings, utility parts, containers</text>
+                      </g>
+                      <g transform="translate(0,240)">
+                        <rect x="0" y="0" width="380" height="90" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Textiles → Insulators / Fillers</text>
+                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Blankets, insulating panels, padding</text>
+                      </g>
+                      <g transform="translate(0,360)">
+                        <rect x="0" y="0" width="380" height="90" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Carbonaceous → Activated Carbon / Char</text>
+                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Filters, adsorbents, composite additive</text>
+                      </g>
+                      <g transform="translate(0,480)">
+                        <rect x="0" y="0" width="380" height="100" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
+                        <text x="16" y="32" fill="#ffd9b3" font-size="15" font-weight="700">Regolith → Blocks / Geopolymers</text>
+                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Walls, molds, vitreous ornamentation</text>
+                      </g>
+                    </g>
+
+                    <!-- Arrows -->
+                    <g stroke="#ffb37a" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+                      <path d="M280,160 L340,160"/>
+                      <path d="M280,280 L340,280"/>
+                      <path d="M280,400 L340,400"/>
+                      <path d="M280,520 L340,520"/>
+                      <path d="M280,640 L340,640"/>
+                    </g>
+                    <g stroke="#cfe7f6" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
+                      <path d="M680,160 L740,160"/>
+                      <path d="M680,280 L740,280"/>
+                      <path d="M680,400 L740,400"/>
+                      <path d="M680,520 L740,520"/>
+                      <path d="M680,640 L740,640"/>
+                    </g>
+
+                    <!-- Footer notes -->
+                    <rect x="10" y="1320" width="1180" height="170" rx="12" fill="#071823" stroke="#0f1720" stroke-width="2"/>
+                    <text x="30" y="1355" fill="#cfe7f6" font-size="14" font-weight="700">Operational Notes</text>
+                    <text x="30" y="1385" fill="#9fbdd6" font-size="13">• Protect optics and mechanisms from Martian dust; periodic cleaning and seals.</text>
+                    <text x="30" y="1410" fill="#9fbdd6" font-size="13">• Prioritize solar sintering and solar drying to minimize electricity use.</text>
+                    <text x="30" y="1435" fill="#9fbdd6" font-size="13">• Design modular equipment, repairable with locally printed parts.</text>
+                    <text x="30" y="1460" fill="#9fbdd6" font-size="13">• Thermal processes (casting, pyrolysis) require sealed chambers and controls; avoid releasing byproducts into habitat.</text>
+                  </svg>
+                `
+              }}
+            />
+          </div>
+
+          {/* Leyenda opcional */}
+          <div className="mt-8 text-center text-gray-400 text-sm flex flex-wrap justify-center gap-4">
+            <span>🟥 Raw Materials</span>
+            <span>🟦 Processes / Machines</span>
+            <span>🟨 Final Products</span>
           </div>
         </div>
       </section>
@@ -307,10 +443,10 @@ const App = () => {
             </div>
           </div>
           <p className="text-gray-400 mb-4">
-            TUKUNA MARS — Turning space waste into Martian life since 2025.
+            TUKUNA FOR MARS — Turning space waste into Martian life since 2025.
           </p>
           <div className="flex justify-center space-x-6 text-gray-500">
-            <span>© 2025 TUKUNA MARS</span>
+            <span>© 2025 TUKUNA FOR MARS</span>
             <span>•</span>
             <span>Regenerating the cosmos, one orbit at a time</span>
           </div>
@@ -321,3 +457,4 @@ const App = () => {
 };
 
 export default App;
+
