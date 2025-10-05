@@ -26,7 +26,7 @@ const App = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src="/logo-animated.svg" alt="TUKUNA FOR MARS" className="w-8 h-8" />
+            <img src="/logo-animated.svg" alt="TUKUNA MARS" className="w-8 h-8" />
             <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
               TUKUNA MARS
             </span>
@@ -50,11 +50,12 @@ const App = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section — NUEVO DISEÑO ÚNICO Y GENIAL */}
       <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        {/* Fondo espacial con estrellas animadas */}
         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-amber-900/10"></div>
         <div className="absolute inset-0 opacity-20">
-          {[...Array(60)].map((_, i) => (
+          {[...Array(80)].map((_, i) => (
             <div
               key={i}
               className="absolute w-1 h-1 bg-amber-200 rounded-full animate-pulse"
@@ -62,48 +63,71 @@ const App = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
+                animationDuration: `${2 + Math.random() * 3}s`
               }}
             />
           ))}
         </div>
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+
+        {/* Contenido central */}
+        <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+          {/* Logo animado grande */}
           <div className="flex justify-center mb-8">
             <div className="relative">
-              <Recycle className="w-24 h-24 text-emerald-400 animate-spin" style={{ animationDuration: '25s' }} />
-              <Leaf className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12 text-amber-400" />
+              <img 
+                src="/logo-animated.svg" 
+                alt="TUKUNA MARS" 
+                className="w-32 h-32 animate-spin" 
+                style={{ animationDuration: '15s', animationIterationCount: 'infinite' }}
+              />
             </div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-emerald-400 via-amber-400 to-orange-400 bg-clip-text text-transparent">
+
+          {/* Título con gradiente y sombra */}
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-emerald-400 via-amber-400 to-orange-400 bg-clip-text text-transparent drop-shadow-lg">
               TUKUNA
             </span>
             <br />
-            <span className="text-white">MARS</span>
+            <span className="text-white drop-shadow-lg">MARS</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+
+          {/* Subtítulo con animación de entrada */}
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed animate-fade-in">
             Pioneering sustainable space ecosystems by transforming orbital waste into Martian life resources
           </p>
+
+          {/* Botones con efecto hover y sombra */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => scrollToSection('mission')}
-              className="bg-gradient-to-r from-emerald-500 to-amber-500 hover:from-emerald-600 hover:to-amber-600 text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg shadow-emerald-500/25"
+              className="bg-gradient-to-r from-emerald-500 to-amber-500 hover:from-emerald-600 hover:to-amber-600 text-white px-8 py-4 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg shadow-emerald-500/25 hover:shadow-emerald-500/40"
             >
               Join the 2025 Mission
             </button>
             <button
               onClick={() => scrollToSection('agents')}
-              className="border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all"
+              className="border-2 border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-gray-900 px-8 py-4 rounded-full font-semibold transition-all hover:scale-105 shadow-md"
             >
               Meet Our Agents
             </button>
           </div>
-          <p className="mt-6 text-amber-300 font-medium">Launching operations in 2025</p>
+
+          {/* Línea de tiempo o estado */}
+          <p className="mt-6 text-amber-300 font-medium animate-bounce">
+            🚀 Launching operations in 2025
+          </p>
         </div>
+
+        {/* Flecha animada hacia abajo */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
           <ChevronRight className="w-6 h-6 text-amber-400 rotate-90" />
         </div>
       </section>
 
+      {/* Resto del código (Mission, Agents, Process, Sponsors, Footer) permanece igual */}
+      {/* ... (sigue el resto del código como antes) */}
+      
       {/* Mission Section */}
       <section id="mission" className="py-20 px-6 bg-gray-900/50">
         <div className="max-w-6xl mx-auto">
@@ -191,23 +215,12 @@ const App = () => {
             </div>
             <div className="relative">
               <div className="bg-gradient-to-br from-gray-800 to-amber-900/20 rounded-2xl p-8 border border-amber-700/30">
-                {/* 🔥 Reemplaza esto con tu imagen o video del prototipo */}
                 <div className="aspect-square bg-gray-900 rounded-xl mb-6 relative overflow-hidden">
-                  {/* Opción 1: Imagen estática (recomendado si no tienes video) */}
                   <img 
                     src="/prototype.jpg" 
                     alt="TUKUNA Prototype" 
                     className="w-full h-full object-cover" 
                   />
-                  {/* Opción 2: Video (descomenta si lo tienes) */}
-                  {/* <video 
-                    src="/prototype.mp4" 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
-                    className="w-full h-full object-cover"
-                  /> */}
                 </div>
                 <h3 className="text-2xl font-bold mb-4 text-center text-amber-300">TUKUNA Prototype — Mars Ready</h3>
                 <div className="space-y-3">
@@ -294,7 +307,7 @@ const App = () => {
             </div>
           </div>
           <p className="text-gray-400 mb-4">
-            TUKUNA FOR MARS — Turning space waste into Martian life since 2025.
+            TUKUNA MARS — Turning space waste into Martian life since 2025.
           </p>
           <div className="flex justify-center space-x-6 text-gray-500">
             <span>© 2025 TUKUNA MARS</span>
@@ -308,7 +321,3 @@ const App = () => {
 };
 
 export default App;
-
-
-
-
