@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #FF6B35;
+        stroke: #FF6B35;
+        stroke-miterlimit: 10;
+      }
+      .cls-2 {
+        fill: #2ECC71;
+        animation: spin 4s linear infinite;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="64" cy="64" r="50"/>
+  <path class="cls-2" d="M80,30c0,0-10,20-20,20S40,30,40,30"/>
+  <path class="cls-2" d="M90,60c0,0-20,10-20,20s20,10,20,10"/>
+  <path class="cls-2" d="M50,90c0,0,10-20,20-20s20,20,20,20"/>
+</svg>
