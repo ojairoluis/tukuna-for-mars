@@ -241,164 +241,202 @@ const App = () => {
       </section>
 
       {/* Process Section — Organigrama Vertical */}
-      <section id="process" className="py-20 px-6 bg-gray-900/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              The <span className="text-amber-400">TUKUNA Cycle</span>
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Recycling & manufacturing roadmap — Mars
-            </p>
-          </div>
+    {/* Process Section — Organigrama Vertical tipo StarCraft */}
+<section id="process" className="py-20 px-6 bg-gray-900/50">
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-12">
+      <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        The <span className="text-amber-400">TUKUNA Cycle</span>
+      </h2>
+      <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        Recycling & manufacturing roadmap — Mars
+      </p>
+    </div>
 
-          {/* Contenedor del organigrama */}
-          <div 
-            className="bg-gradient-to-b from-gray-900/30 to-black/50 rounded-2xl p-4 md:p-6 border border-amber-900/20 overflow-hidden"
-            style={{ 
-              background: 'linear-gradient(180deg, rgba(10,10,15,0.8), rgba(0,0,0,0.9))',
-              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.7)'
-            }}
-          >
-            <div 
-              className="flow overflow-x-auto overflow-y-hidden"
-              dangerouslySetInnerHTML={{
-                __html: `
-                  <svg viewBox="0 0 1200 1500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet" style="min-width:1200px; display: block;">
-                    <defs>
-                      <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-                        <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.7"/>
-                      </filter>
-                      <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
-                        <path d="M0,0 L12,6 L0,12 z" fill="#e6eef6"/>
-                      </marker>
-                      <linearGradient id="gradA" x1="0" x2="1"><stop offset="0" stop-color="#14202b"/><stop offset="1" stop-color="#0f1720"/></linearGradient>
-                      <linearGradient id="gradB" x1="0" x2="1"><stop offset="0" stop-color="#1a2b38"/><stop offset="1" stop-color="#0f1720"/></linearGradient>
-                    </defs>
+    {/* Contenedor del organigrama con estilo StarCraft */}
+    <div 
+      className="bg-gradient-to-b from-gray-900/30 to-black/50 rounded-2xl p-4 md:p-6 border border-emerald-900/30 overflow-hidden"
+      style={{ 
+        background: 'linear-gradient(180deg, rgba(10,10,15,0.9), rgba(0,0,0,0.95))',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.8)',
+        border: '2px solid rgba(0, 255, 128, 0.2)',
+        position: 'relative'
+      }}
+    >
+      <div 
+        className="flow overflow-x-auto overflow-y-hidden"
+        dangerouslySetInnerHTML={{
+          __html: `
+            <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet" style="min-width:1200px; display: block;">
+              <defs>
+                <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#00ff80" flood-opacity="0.3"/>
+                </filter>
+                <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+                  <path d="M0,0 L10,5 L0,10 z" fill="#00ff80"/>
+                </marker>
+                <linearGradient id="gradA" x1="0" x2="1"><stop offset="0" stop-color="#002a1c"/><stop offset="1" stop-color="#001a0f"/></linearGradient>
+                <linearGradient id="gradB" x1="0" x2="1"><stop offset="0" stop-color="#003a2c"/><stop offset="1" stop-color="#001a0f"/></linearGradient>
+              </defs>
 
-                    <!-- Title block -->
-                    <rect x="10" y="10" width="1180" height="80" rx="12" fill="url(#gradA)" stroke="#0b1116" stroke-width="2"/>
-                    <text x="30" y="55" fill="#e6eef6" font-size="22" font-weight="700">Recycling and Manufacturing Routes Map — Mars</text>
+              <!-- Title block -->
+              <rect x="10" y="10" width="1180" height="60" rx="8" fill="url(#gradA)" stroke="#00ff80" stroke-width="1"/>
+              <text x="30" y="45" fill="#00ff80" font-size="20" font-weight="700" font-family="Arial">Recycling and Manufacturing Routes Map — Mars</text>
 
-                    <!-- Left column: Raw Materials -->
-                    <g id="col_left" transform="translate(20,120)">
-                      <g class="node" transform="translate(0,0)">
-                        <rect x="0" y="0" width="260" height="80" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="28" fill="#ffb37a" font-size="15" font-weight="700">1. Metals</text>
-                        <text x="16" y="50" fill="#c6d6e6" font-size="13">Aluminum, scrap, frames</text>
-                      </g>
-                      <g class="node" transform="translate(0,120)">
-                        <rect x="0" y="0" width="260" height="80" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="28" fill="#ffb37a" font-size="15" font-weight="700">2. Plastics</text>
-                        <text x="16" y="50" fill="#c6d6e6" font-size="13">PET, PP, PE, PLA, foams</text>
-                      </g>
-                      <g class="node" transform="translate(0,240)">
-                        <rect x="0" y="0" width="260" height="80" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="28" fill="#ffb37a" font-size="15" font-weight="700">3. Textiles & Fibers</text>
-                        <text x="16" y="50" fill="#c6d6e6" font-size="13">Clothing, Nomex, polyester</text>
-                      </g>
-                      <g class="node" transform="translate(0,360)">
-                        <rect x="0" y="0" width="260" height="80" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="28" fill="#ffb37a" font-size="15" font-weight="700">4. Carbonaceous / Exp.</text>
-                        <text x="16" y="50" fill="#c6d6e6" font-size="13">Char, nitrile gloves, filters</text>
-                      </g>
-                      <g class="node" transform="translate(0,480)">
-                        <rect x="0" y="0" width="260" height="100" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="30" fill="#ffb37a" font-size="15" font-weight="700">5. Regolith</text>
-                        <text x="16" y="52" fill="#c6d6e6" font-size="13">Plagioclase, pyroxene, olivine</text>
-                        <text x="16" y="72" fill="#7ea5c6" font-size="12">Base for geopolymers, sintering</text>
-                      </g>
-                    </g>
+              <!-- Left column: Raw Materials -->
+              <g id="col_left" transform="translate(20,90)">
+                <g class="node" transform="translate(0,0)">
+                  <rect x="0" y="0" width="260" height="70" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#00ff80" font-size="14" font-weight="700" font-family="Arial">1. Metals</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Aluminum, scrap, frames</text>
+                </g>
 
-                    <!-- Middle column: Processes / Machines -->
-                    <g id="col_mid" transform="translate(340,80)">
-                      <g transform="translate(0,0)">
-                        <rect x="0" y="0" width="340" height="80" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="28" fill="#ffd9b3" font-size="15" font-weight="700">Degreasing → CNC Cutting → Casting</text>
-                        <text x="16" y="50" fill="#cfe7f6" font-size="13">Ultrasonic baths · Cutter · Furnace (crucible)</text>
-                      </g>
-                      <g transform="translate(0,120)">
-                        <rect x="0" y="0" width="340" height="100" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Washing → Shredding → Extrusion</text>
-                        <text x="16" y="52" fill="#cfe7f6" font-size="13">Solar drying · Granulator · Modular extruder</text>
-                        <text x="16" y="74" fill="#9cc9e0" font-size="12">Filament / pellets for 3D printing</text>
-                      </g>
-                      <g transform="translate(0,260)">
-                        <rect x="0" y="0" width="340" height="100" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Shredding → Carding → Paneling</text>
-                        <text x="16" y="52" fill="#cfe7f6" font-size="13">Carder · Thermal setting press · Non-woven</text>
-                        <text x="16" y="74" fill="#9cc9e0" font-size="12">Insulators · Fillers · Composite reinforcements</text>
-                      </g>
-                      <g transform="translate(0,420)">
-                        <rect x="0" y="0" width="340" height="100" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Pyrolysis → Activation → Post-proc.</text>
-                        <text x="16" y="52" fill="#cfe7f6" font-size="13">Anoxic reactor · Condenser · Activator (steam)</text>
-                        <text x="16" y="74" fill="#9cc9e0" font-size="12">Char, activated carbon, composite additive</text>
-                      </g>
-                      <g transform="translate(0,580)">
-                        <rect x="0" y="0" width="340" height="120" rx="10" fill="url(#gradB)" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="32" fill="#ffd9b3" font-size="15" font-weight="700">Solar Concentrator → Sintering / Melting</text>
-                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Paraboloid / solar oven · Sintering chamber</text>
-                        <text x="16" y="76" fill="#9cc9e0" font-size="12">Blocks, molds, geopolymers, glass</text>
-                      </g>
-                    </g>
+                <g class="node" transform="translate(0,90)">
+                  <rect x="0" y="0" width="260" height="70" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#00ff80" font-size="14" font-weight="700" font-family="Arial">2. Plastics</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">PET, PP, PE, PLA, foams</text>
+                </g>
 
-                    <!-- Right column: Final Products -->
-                    <g id="col_right" transform="translate(740,120)">
-                      <g transform="translate(0,0)">
-                        <rect x="0" y="0" width="380" height="90" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Metals → Tools & Cast Parts</text>
-                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Wrenches, supports, bushings</text>
-                      </g>
-                      <g transform="translate(0,120)">
-                        <rect x="0" y="0" width="380" height="90" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Plastics → Filament / 3D Parts</text>
-                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Casings, utility parts, containers</text>
-                      </g>
-                      <g transform="translate(0,240)">
-                        <rect x="0" y="0" width="380" height="90" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Textiles → Insulators / Fillers</text>
-                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Blankets, insulating panels, padding</text>
-                      </g>
-                      <g transform="translate(0,360)">
-                        <rect x="0" y="0" width="380" height="90" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="30" fill="#ffd9b3" font-size="15" font-weight="700">Carbonaceous → Activated Carbon / Char</text>
-                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Filters, adsorbents, composite additive</text>
-                      </g>
-                      <g transform="translate(0,480)">
-                        <rect x="0" y="0" width="380" height="100" rx="10" fill="#071823" stroke="#123241" stroke-width="2"/>
-                        <text x="16" y="32" fill="#ffd9b3" font-size="15" font-weight="700">Regolith → Blocks / Geopolymers</text>
-                        <text x="16" y="54" fill="#cfe7f6" font-size="13">Walls, molds, vitreous ornamentation</text>
-                      </g>
-                    </g>
+                <g class="node" transform="translate(0,180)">
+                  <rect x="0" y="0" width="260" height="70" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#00ff80" font-size="14" font-weight="700" font-family="Arial">3. Textiles & Fibers</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Clothing, Nomex, polyester</text>
+                </g>
 
-                    <!-- Arrows -->
-                    <g stroke="#ffb37a" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
-                      <path d="M280,160 L340,160"/>
-                      <path d="M280,280 L340,280"/>
-                      <path d="M280,400 L340,400"/>
-                      <path d="M280,520 L340,520"/>
-                      <path d="M280,640 L340,640"/>
-                    </g>
-                    <g stroke="#cfe7f6" stroke-width="2.5" fill="none" marker-end="url(#arrow)">
-                      <path d="M680,160 L740,160"/>
-                      <path d="M680,280 L740,280"/>
-                      <path d="M680,400 L740,400"/>
-                      <path d="M680,520 L740,520"/>
-                      <path d="M680,640 L740,640"/>
-                    </g>
-              }}
-            />
-          </div>
+                <g class="node" transform="translate(0,270)">
+                  <rect x="0" y="0" width="260" height="70" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#00ff80" font-size="14" font-weight="700" font-family="Arial">4. Carbonaceous / Exp.</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Char, nitrile gloves, filters</text>
+                </g>
 
-          {/* Leyenda opcional */}
-          <div className="mt-8 text-center text-gray-400 text-sm flex flex-wrap justify-center gap-4">
-            <span>🟥 Raw Materials</span>
-            <span>🟦 Processes / Machines</span>
-            <span>🟨 Final Products</span>
-          </div>
-        </div>
-      </section>
+                <g class="node" transform="translate(0,360)">
+                  <rect x="0" y="0" width="260" height="80" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#00ff80" font-size="14" font-weight="700" font-family="Arial">5. Regolith</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Plagioclase, pyroxene, olivine</text>
+                  <text x="16" y="62" fill="#00aa55" font-size="11" font-family="Arial">Base for geopolymers</text>
+                </g>
+              </g>
+
+              <!-- Middle column: Processes / Machines -->
+              <g id="col_mid" transform="translate(340,70)">
+                <!-- Metals route -->
+                <g transform="translate(0,0)">
+                  <rect x="0" y="0" width="340" height="70" rx="6" fill="url(#gradB)" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Degreasing → CNC Cutting → Casting</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Ultrasonic baths · Cutter · Furnace</text>
+                </g>
+
+                <!-- Plastics route -->
+                <g transform="translate(0,90)">
+                  <rect x="0" y="0" width="340" height="80" rx="6" fill="url(#gradB)" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Washing → Shredding → Extrusion</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Solar drying · Granulator · Extruder</text>
+                  <text x="16" y="62" fill="#00aa55" font-size="11" font-family="Arial">Filament for 3D printing</text>
+                </g>
+
+                <!-- Textiles route -->
+                <g transform="translate(0,190)">
+                  <rect x="0" y="0" width="340" height="80" rx="6" fill="url(#gradB)" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Shredding → Carding → Paneling</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Carder · Thermal press · Non-woven</text>
+                  <text x="16" y="62" fill="#00aa55" font-size="11" font-family="Arial">Insulators · Fillers</text>
+                </g>
+
+                <!-- Carbonaceous route -->
+                <g transform="translate(0,300)">
+                  <rect x="0" y="0" width="340" height="80" rx="6" fill="url(#gradB)" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Pyrolysis → Activation → Post-proc.</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Reactor · Condenser · Activator</text>
+                  <text x="16" y="62" fill="#00aa55" font-size="11" font-family="Arial">Char, activated carbon</text>
+                </g>
+
+                <!-- Regolith route -->
+                <g transform="translate(0,410)">
+                  <rect x="0" y="0" width="340" height="90" rx="6" fill="url(#gradB)" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Solar Concentrator → Sintering</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Paraboloid · Sintering chamber</text>
+                  <text x="16" y="62" fill="#00aa55" font-size="11" font-family="Arial">Blocks, geopolymers, glass</text>
+                </g>
+              </g>
+
+              <!-- Right column: Final Products -->
+              <g id="col_right" transform="translate(740,90)">
+                <g transform="translate(0,0)">
+                  <rect x="0" y="0" width="380" height="70" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Metals → Tools & Cast Parts</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Wrenches, supports, bushings</text>
+                </g>
+
+                <g transform="translate(0,90)">
+                  <rect x="0" y="0" width="380" height="70" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Plastics → Filament / 3D Parts</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Casings, utility parts, containers</text>
+                </g>
+
+                <g transform="translate(0,180)">
+                  <rect x="0" y="0" width="380" height="70" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Textiles → Insulators / Fillers</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Blankets, panels, padding</text>
+                </g>
+
+                <g transform="translate(0,270)">
+                  <rect x="0" y="0" width="380" height="70" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Carbonaceous → Activated Carbon</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Filters, adsorbents, additives</text>
+                </g>
+
+                <g transform="translate(0,360)">
+                  <rect x="0" y="0" width="380" height="80" rx="6" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+                  <text x="16" y="25" fill="#ffcc00" font-size="14" font-weight="700" font-family="Arial">Regolith → Blocks / Geopolymers</text>
+                  <text x="16" y="45" fill="#00cc66" font-size="12" font-family="Arial">Walls, molds, vitreous ornamentation</text>
+                </g>
+              </g>
+
+              <!-- Arrows from left to middle -->
+              <g stroke="#00ff80" stroke-width="2" fill="none" marker-end="url(#arrow)">
+                <path d="M280,125 L340,125"/>
+                <path d="M280,215 L340,215"/>
+                <path d="M280,305 L340,305"/>
+                <path d="M280,395 L340,395"/>
+                <path d="M280,485 L340,485"/>
+              </g>
+
+              <!-- Arrows from middle to right -->
+              <g stroke="#00cc66" stroke-width="2" fill="none" marker-end="url(#arrow)">
+                <path d="M680,125 L740,125"/>
+                <path d="M680,215 L740,215"/>
+                <path d="M680,305 L740,305"/>
+                <path d="M680,395 L740,395"/>
+                <path d="M680,485 L740,485"/>
+              </g>
+
+              <!-- Footer notes -->
+              <rect x="10" y="720" width="1180" height="70" rx="8" fill="#002a1c" stroke="#00ff80" stroke-width="1"/>
+              <text x="30" y="745" fill="#00ff80" font-size="13" font-weight="700" font-family="Arial">Operational Notes</text>
+              <text x="30" y="765" fill="#00cc66" font-size="11" font-family="Arial">• Protect optics and mechanisms from Martian dust • Prioritize solar processes • Design modular equipment</text>
+            </svg>
+          `
+        }}
+      />
+    </div>
+
+    {/* Leyenda tipo HUD de StarCraft */}
+    <div className="mt-6 text-center text-sm flex flex-wrap justify-center gap-4 text-gray-400">
+      <span className="flex items-center gap-2">
+        <span className="w-4 h-4 bg-gradient-to-r from-emerald-500 to-green-400 rounded-sm"></span>
+        Raw Materials
+      </span>
+      <span className="flex items-center gap-2">
+        <span className="w-4 h-4 bg-gradient-to-r from-amber-500 to-yellow-400 rounded-sm"></span>
+        Processes / Machines
+      </span>
+      <span className="flex items-center gap-2">
+        <span className="w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-300 rounded-sm"></span>
+        Final Products
+      </span>
+    </div>
+  </div>
+</section>
 
       {/* Sponsors Section */}
       <section id="sponsors" className="py-20 px-6">
@@ -447,5 +485,6 @@ const App = () => {
 };
 
 export default App;
+
 
 
