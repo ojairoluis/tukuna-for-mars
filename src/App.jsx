@@ -24,13 +24,12 @@ const App = () => {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-gray-900/90 backdrop-blur-sm py-2' : 'bg-transparent py-4'
       }`}>
-        <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-          <div className="flex items-center space-x-2">
-            <Leaf className="w-8 h-8 text-emerald-400" />
-            <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
-              TUKUNA FOR MARS
-            </span>
-          </div>
+        <div className="flex items-center space-x-2">
+  <img src="/logo.png" alt="TUKUNA MARS" className="w-8 h-8 rounded-full" />
+  <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
+    TUKUNA MARS
+  </span>
+</div>
           <div className="hidden md:flex space-x-8">
             {['hero', 'mission', 'agents', 'process', 'sponsors'].map((section) => (
               <button
@@ -294,4 +293,5 @@ const App = () => {
 };
 
 export default App;
+
 
