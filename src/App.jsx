@@ -31,10 +31,10 @@ const App = () => {
   ];
 
   const prototypeImages = [
-    { src: '/renders/prototype1.jpg', title: 'TUKUNA Rover — Mars Surface Unit' },
-    { src: '/renders/prototype2.jpg', title: 'Orbital Assembly View' },
-    { src: '/renders/prototype3.jpg', title: 'Regolith Processing Module' },
-    { src: '/renders/prototype4.jpg', title: 'Solar Smelting Station' }
+    { src: '/renders/prototype1.jpg', title: 'Front View – Rover Prototype Overview' },
+    { src: '/renders/prototype2.jpg', title: 'Bottom View – Undercarriage and Mobility System' },
+    { src: '/renders/prototype3.jpg', title: 'CAT Image – Structural and Functional Layout' },
+    { src: '/renders/prototype4.jpg', title: 'Rear View – Power and Collection Module' }
   ];
 
   return (
@@ -475,6 +475,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
