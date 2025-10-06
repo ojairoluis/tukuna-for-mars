@@ -24,10 +24,10 @@ const App = () => {
 
   // Lista de imágenes para la galería
   const componentImages = [
-    { src: '/renders/head.jpg', title: 'Cabeza / Sensor Array' },
-    { src: '/renders/axle.jpg', title: 'Eje / Drive System' },
-    { src: '/renders/wheel.jpg', title: 'Llanta / Traction Module' },
-    { src: '/renders/caliper.jpg', title: 'Pinzas / Manipulator Arm' }
+    { src: '/renders/head.jpg', title: 'Head/ Sensor Array' },
+    { src: '/renders/axle.jpg', title: 'Axle / Drive System' },
+    { src: '/renders/wheel.jpg', title: 'Wheel / Traction Module' },
+    { src: '/renders/caliper.jpg', title: 'Caliper / Manipulator Arm' }
   ];
 
   const prototypeImages = [
@@ -475,6 +475,7 @@ const App = () => {
 };
 
 export default App;
+
 
 
 
