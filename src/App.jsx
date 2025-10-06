@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Rocket, Recycle, Zap, Globe, ChevronRight, Leaf } from 'lucide-react';
+import { Rocket, Recycle, Zap, Globe, ChevronRight, Leaf, X } from 'lucide-react';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,24 @@ const App = () => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const openModal = (src) => setSelectedImage(src);
+  const closeModal = () => setSelectedImage(null);
+
+  // Lista de imágenes para la galería
+  const componentImages = [
+    { src: '/renders/head.jpg', title: 'Cabeza / Sensor Array' },
+    { src: '/renders/axle.jpg', title: 'Eje / Drive System' },
+    { src: '/renders/wheel.jpg', title: 'Llanta / Traction Module' },
+    { src: '/renders/caliper.jpg', title: 'Pinzas / Manipulator Arm' }
+  ];
+
+  const prototypeImages = [
+    { src: '/renders/prototype1.jpg', title: 'TUKUNA Rover — Mars Surface Unit' },
+    { src: '/renders/prototype2.jpg', title: 'Orbital Assembly View' },
+    { src: '/renders/prototype3.jpg', title: 'Regolith Processing Module' },
+    { src: '/renders/prototype4.jpg', title: 'Solar Smelting Station' }
+  ];
+
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden font-sans">
       {/* Navigation */}
@@ -26,9 +45,9 @@ const App = () => {
       }`}>
         <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <img src="/logo-animated.svg" alt="TUKUNA FOR MARS" className="w-8 h-8" />
+            <img src="/logo-animated.svg" alt="TUKUNA MARS" className="w-8 h-8" />
             <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-amber-400 bg-clip-text text-transparent">
-              TUKUNA FOR MARS
+              TUKUNA MARS
             </span>
           </div>
           <div className="hidden md:flex space-x-8">
@@ -72,7 +91,7 @@ const App = () => {
             <div className="relative">
               <img 
                 src="/logo-animated.svg" 
-                alt="TUKUNA FOR MARS" 
+                alt="TUKUNA MARS" 
                 className="w-32 h-32 animate-spin" 
                 style={{ animationDuration: '15s', animationIterationCount: 'infinite' }}
               />
@@ -83,7 +102,7 @@ const App = () => {
               TUKUNA
             </span>
             <br />
-            <span className="text-white drop-shadow-lg">FOR MARS</span>
+            <span className="text-white drop-shadow-lg">MARS</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
             Pioneering sustainable space ecosystems by transforming orbital waste into Martian life resources
@@ -152,7 +171,7 @@ const App = () => {
         </div>
       </section>
 
-      {/* Agents Section — Prototipo con Galería */}
+      {/* Agents Section — Prototipo con Galería Interactiva */}
       <section id="agents" className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -164,63 +183,49 @@ const App = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="relative rounded-2xl overflow-hidden border border-amber-700/30 bg-gray-800/50">
-              <img 
-                src="/renders/prototype1.jpg" 
-                alt="TUKUNA Prototype — Mars Ready" 
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 text-white">
-                <h3 className="text-xl font-bold">TUKUNA Rover — Mars Surface Unit</h3>
-                <p className="text-sm opacity-90">Modular, solar-powered, self-repairing</p>
-              </div>
+          {/* Galería de componentes */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-amber-300 mb-6 text-center">Component Breakdown</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {componentImages.map((img, i) => (
+                <div 
+                  key={i} 
+                  onClick={() => openModal(img.src)}
+                  className="group rounded-xl overflow-hidden border border-gray-700 hover:border-emerald-500 cursor-pointer transition-all"
+                >
+                  <img 
+                    src={img.src} 
+                    alt={img.title} 
+                    className="w-full h-40 object-cover"
+                  />
+                  <div className="p-3 bg-gray-900/80">
+                    <p className="text-sm text-gray-300">{img.title}</p>
+                  </div>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-amber-300">Component Breakdown</h3>
-              
-              <div className="group flex items-center p-4 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-emerald-500 transition-all cursor-pointer">
-                <img src="/renders/head.jpg" alt="Head Component" className="w-16 h-16 rounded-lg object-cover mr-4" />
-                <div>
-                  <h4 className="font-semibold text-white">Cabeza / Sensor Array</h4>
-                  <p className="text-gray-400 text-sm">LIDAR, thermal vision, dust-resistant optics</p>
+          {/* Galería de prototipos */}
+          <div>
+            <h3 className="text-2xl font-bold text-amber-300 mb-6 text-center">Prototype Gallery</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {prototypeImages.map((img, i) => (
+                <div 
+                  key={i} 
+                  onClick={() => openModal(img.src)}
+                  className="group rounded-xl overflow-hidden border border-gray-700 hover:border-amber-500 cursor-pointer transition-all"
+                >
+                  <img 
+                    src={img.src} 
+                    alt={img.title} 
+                    className="w-full h-48 object-cover"
+                  />
+                  <div className="p-3 bg-gray-900/80">
+                    <p className="text-sm text-gray-300">{img.title}</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="group flex items-center p-4 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-emerald-500 transition-all cursor-pointer">
-                <img src="/renders/axle.jpg" alt="Axle Component" className="w-16 h-16 rounded-lg object-cover mr-4" />
-                <div>
-                  <h4 className="font-semibold text-white">Eje / Drive System</h4>
-                  <p className="text-gray-400 text-sm">Sealed bearings, regenerative braking, torque control</p>
-                </div>
-              </div>
-
-              <div className="group flex items-center p-4 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-emerald-500 transition-all cursor-pointer">
-                <img src="/renders/wheel.jpg" alt="Wheel Component" className="w-16 h-16 rounded-lg object-cover mr-4" />
-                <div>
-                  <h4 className="font-semibold text-white">Llanta / Traction Module</h4>
-                  <p className="text-gray-400 text-sm">Martian soil grip, self-cleaning treads, impact resistant</p>
-                </div>
-              </div>
-
-              <div className="group flex items-center p-4 bg-gray-800/50 rounded-xl border border-gray-700 hover:border-emerald-500 transition-all cursor-pointer">
-                <img src="/renders/caliper.jpg" alt="Caliper Component" className="w-16 h-16 rounded-lg object-cover mr-4" />
-                <div>
-                  <h4 className="font-semibold text-white">Pinzas / Manipulator Arm</h4>
-                  <p className="text-gray-400 text-sm">Multi-grip, debris sorting, tool attachment interface</p>
-                </div>
-              </div>
-
-              <div className="mt-6 grid grid-cols-2 gap-4">
-                <div className="rounded-lg overflow-hidden border border-gray-700 hover:border-amber-500 transition-all">
-                  <img src="/renders/prototype2.jpg" alt="Prototype View 2" className="w-full h-32 object-cover" />
-                </div>
-                <div className="rounded-lg overflow-hidden border border-gray-700 hover:border-amber-500 transition-all">
-                  <img src="/renders/prototype3.jpg" alt="Prototype View 3" className="w-full h-32 object-cover" />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -436,20 +441,41 @@ const App = () => {
             </div>
           </div>
           <p className="text-gray-400 mb-4">
-            TUKUNA FOR MARS — Turning space waste into Martian life since 2025.
+            TUKUNA MARS — Turning space waste into Martian life since 2025.
           </p>
           <div className="flex justify-center space-x-6 text-gray-500">
-            <span>© 2025 TUKUNA FOR MARS</span>
+            <span>© 2025 TUKUNA MARS</span>
             <span>•</span>
             <span>Regenerating the cosmos, one orbit at a time</span>
           </div>
         </div>
       </footer>
+
+      {/* Modal de imagen agrandada */}
+      {selectedImage && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={closeModal}
+        >
+          <button 
+            className="absolute top-4 right-4 text-white bg-black/50 p-2 rounded-full z-50"
+            onClick={closeModal}
+          >
+            <X className="w-6 h-6" />
+          </button>
+          <img 
+            src={selectedImage} 
+            alt="Enlarged view" 
+            className="max-w-full max-h-full object-contain"
+          />
+        </div>
+      )}
     </div>
   );
 };
 
 export default App;
+
 
 
 
